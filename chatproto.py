@@ -44,7 +44,8 @@ def make_app():
     handlers = [
         (r"/", ChatPageHandler),
     ]
-    return tornado.web.Application(handlers,debug=True,template_path='./templates')
+    return tornado.web.Application(handlers,debug=True,template_path='./templates',
+            static_path='./static',static_url_prefix='/static/')
 
 
 
