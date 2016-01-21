@@ -1,3 +1,36 @@
+
+html {
+    margin: 0;
+    height: 100%;
+}
 body {
     background-color: red;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+#login {
+    background-color: blue;
+    width: 49%;
+    height: 50%;
+    display: inline-block;
+}
+#msgDisplay {
+    background-color: green;
+    width: 49%;
+    display: inline-block;
+    height: 50%;
+
+}
+#nickDisplay {
+    width: 49%;
+    height: 50%;
+    display: inline-block;
+    background-color: orange;
+}
+#chatBar {
+    width: 49%;
+    height: 50%;
+    display: inline-block;
+    background-color: purple;
 }
