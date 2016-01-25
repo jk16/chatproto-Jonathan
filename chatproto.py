@@ -45,12 +45,16 @@ class MessagePageHandler(tornado.web.RequestHandler):
         response = {"success": True}
         self.set_header("Content-Type", "application/json")
         self.write(json.dumps(response))
-        
+class LogoutPageHandler(tornado.web.RequestHandler):
+    def post(self):
+        pass
+
 def make_app():
     handlers = [
         (r"/", ChatPageHandler),
         ("/login" , LoginPageHandler),
-        ("/msg", MessagePageHandler)
+        ("/msg", MessagePageHandler),
+        ("/logout", LogoutPageHandler)
     ]
     return tornado.web.Application(handlers,debug=True,template_path='./templates',
             static_path='./static',static_url_prefix='/static/')
