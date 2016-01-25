@@ -1,9 +1,11 @@
 $( document ).ready(function() {
     var $loginForm = $("#loginForm");
     var $chatBarForm = $("#chatBarForm");
+    var $login = $("#login");
+    var $chatBar = $("#chatBar");
     $loginForm.show();
     
-    $('#login').on('submit', function(e) {
+    $login.on('submit', function(e) {
 
         e.preventDefault();
 
@@ -21,11 +23,34 @@ $( document ).ready(function() {
             data: message,
             success: function(response) {
                 //server response that the data was received 
-                console.log("success");
                 $loginForm.hide();
                 $chatBarForm.show();
             }
         })
 
     }); //end login on submit
+
+    $chatBar.on("submit", function(e) {
+        e.preventDefault();
+
+        var $user = $("#username");
+        var $msg = $("#msg");
+
+        var data = {
+            username: $user.val(),
+            message: $msg.val()
+        };
+
+        var data_JSON = JSON.stringify(data);
+
+        $.ajax({
+            type: 'POST',
+            url: '/msg',
+            data: data,
+            success: function(response) {
+                //
+                console.log('success');
+            }
+        });
+    });
 });
