@@ -1,5 +1,6 @@
 $( document ).ready(function() {
     var $loginForm = $("#loginForm");
+    var $logoutForm = $("#logoutForm");
     var $chatBarForm = $("#chatBarForm");
     var $login = $("#login");
     var $chatBar = $("#chatBar");
