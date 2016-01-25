@@ -16,12 +16,12 @@ Todo
 * <s>Bundle up the message and send to a new fictional page of your choosing</s>
   * <s>Send the username and send the message</s>
 * <s>Create "message handler" on the server</s>
-* Make logout form
+* <s>Make logout form
   * Logout should be next to submit button for the chat box
   * Logout should be its own form
   * Make logout handler
     * Send to fictional page of your own choosing
-    * Bundle username and send it back
+    * Bundle username and send it back </s>
 
 
 
