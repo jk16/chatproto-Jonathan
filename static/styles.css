@@ -11,26 +11,29 @@ body {
 }
 #login {
     background-color: blue;
-    width: 49%;
+    width: 45%;
     height: 50%;
     display: inline-block;
 }
 #msgDisplay {
     background-color: green;
-    width: 49%;
+    width: 45%;
     display: inline-block;
     height: 50%;
 
 }
 #nickDisplay {
-    width: 49%;
+    width: 45%;
     height: 50%;
     display: inline-block;
     background-color: orange;
 }
 #chatBar {
-    width: 49%;
+    width: 45%;
     height: 50%;
     display: inline-block;
     background-color: purple;
+}
+.hidden {
+    display: none;
 }
