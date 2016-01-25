@@ -12,10 +12,10 @@ Todo
   * <s>response should have correct mime type aka right "content type"</s>
 * <s>Form for chat message text box</s>
 * <s>After login *success* hide login form and show "chat message textbox form"</s>
-* Attach a submit handler to "chat message textbox"
-* Bundle up the message and send to a new fictional page of your choosing
-  * Send the username and send the message
-* Create "message handler" on the server
+* <s>Attach a submit handler to "chat message textbox"</s>
+* <s>Bundle up the message and send to a new fictional page of your choosing</s>
+  * <s>Send the username and send the message</s>
+* <s>Create "message handler" on the server</s>
 * Make logout form
   * Logout should be next to submit button for the chat box
   * Logout should be its own form
