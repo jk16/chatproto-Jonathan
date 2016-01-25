@@ -1,7 +1,7 @@
 Todo
 ---
 
-* Submit: Change what it says. [DONE]
+* Submit: Change what it says
 * Make a JS File and link it in the header. [DONE]
 * Capture the submit event of the login form. [DONE]
   * Send the username to the server via ajax POST (you will get an error bc it is a non existent pg) [DONE]
@@ -10,3 +10,57 @@ Todo
   * response: {success: true, message: LOGGED IN} [DONE]
   * response should be in json [DONE]
   * response should have corrent mime type aka right "content type" [DONE]
+* Form for chat message text box
+* After login *success* hide login form and show "chat message textbox form"
+* Attach a submit handler to "chat message textbox"
+* Bundle up the message and send to a new fictional page of your choosing
+  * Send the username and send the message
+* Create "message handler" on the server
+* Make logout form
+  * Logout should be next to submit button for the chat box
+  * Logout should be its own form
+  * Make logout handler
+    * Send to fictional page of your own choosing
+    * Bundle username and send it back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
