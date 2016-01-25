@@ -3,11 +3,20 @@
 <head>
     <title>Chat</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css"/>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="/static/scripts/js.js"></script>
 </head>
 <body>
-    <div id="login"></div>
+    <div id="login" >
+        <form class='hidden' id="loginForm">
+            <input type="text" name="username" id="username"></input>
+            <input type="submit" ></input>
+        </form>
+        
+    </div>
     <div id="msgDisplay"></div>
     <div id="nickDisplay"></div>
     <div id="chatBar"></div>
 </body>
 </html>
+
