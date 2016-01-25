@@ -15,8 +15,6 @@ $( document ).ready(function() {
             username: $user.val()
         };
 
-        var message_JSON = JSON.stringify(message);
-
         $.ajax({
             type: 'POST',
             url: '/login',
@@ -25,14 +23,14 @@ $( document ).ready(function() {
                 //server response that the data was received 
                 $loginForm.hide();
                 $chatBarForm.show();
+                $logoutForm.show();
             }
         })
 
     }); //end login on submit
 
-    $chatBar.on("submit", function(e) {
+    $chatBarForm.on("submit", function(e) {
         e.preventDefault();
-
         var $user = $("#username");
         var $msg = $("#msg");
 
@@ -49,8 +47,29 @@ $( document ).ready(function() {
             data: data,
             success: function(response) {
                 //
-                console.log('success');
+                console.log('success: chatBarForm submit');
             }
         });
-    });
+    }); //end chatBar on submit
+
+    $logoutForm.on("submit", function(e){
+        e.preventDefault();
+        var $user = $("#username");
+
+        var message = {
+            username: $user.val()
+        };
+
+        $.ajax({
+            type: 'POST',
+            url: '/logout',
+            data: message,
+            success: function(response) {
+                //server response that the data was received 
+                $loginForm.show();
+                $chatBarForm.hide();
+                $logoutForm.hide();
+            }
+        })
+    }); //end logoutForm on submit
 });
