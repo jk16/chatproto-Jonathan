@@ -1,5 +1,7 @@
 $( document ).ready(function() {
-    $("#loginForm").show();
+    var $loginForm = $("#loginForm");
+    var $chatBarForm = $("#chatBarForm");
+    $loginForm.show();
     
     $('#login').on('submit', function(e) {
 
@@ -19,8 +21,11 @@ $( document ).ready(function() {
             data: message,
             success: function(response) {
                 //server response that the data was received 
+                console.log("success");
+                $loginForm.hide();
+                $chatBarForm.show();
             }
         })
 
-    });
+    }); //end login on submit
 });
