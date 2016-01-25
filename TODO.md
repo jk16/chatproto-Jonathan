@@ -1,7 +1,7 @@
 Todo
 ---
 
-* Submit: Change what it says
+* <s>Submit: Change what it says</s>
 * <s>Make a JS File and link it in the header.</s>
 * <s>Capture the submit event of the login form. </s>
   * <s>Send the username to the server via ajax POST (you will get an error bc it is a non existent pg)</s>
@@ -9,9 +9,9 @@ Todo
 * <s>Make a login page handler (tornado)</s>
   * <s>response: {success: true, message: LOGGED IN}</s>
   * <s>response should be in json </s>
-  * <s>response should have corrent mime type aka right "content type"</s>
-* Form for chat message text box
-* After login *success* hide login form and show "chat message textbox form"
+  * <s>response should have correct mime type aka right "content type"</s>
+* <s>Form for chat message text box</s>
+* <s>After login *success* hide login form and show "chat message textbox form"</s>
 * Attach a submit handler to "chat message textbox"
 * Bundle up the message and send to a new fictional page of your choosing
   * Send the username and send the message
