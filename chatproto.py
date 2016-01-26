@@ -36,18 +36,21 @@ class ChatPageHandler(tornado.web.RequestHandler):
 
 class LoginPageHandler(tornado.web.RequestHandler):
     def post(self):
-        response = {"success": True, "message": "LOGGED IN"}
+        response = {"success": True, "message": "logged in successfully"}
         self.set_header("Content-Type", "application/json")
         self.write(json.dumps(response))
 
 class MessagePageHandler(tornado.web.RequestHandler):
     def post(self):
-        response = {"success": True}
+        response = {"success": True, "message": "message sent"}
         self.set_header("Content-Type", "application/json")
         self.write(json.dumps(response))
 class LogoutPageHandler(tornado.web.RequestHandler):
     def post(self):
-        pass
+        response = {"success": True, "message":"logged out successfully"}
+        self.set_header("Content-Type", "application/json")
+        self.write(json.dumps(response))
+
 
 def make_app():
     handlers = [
