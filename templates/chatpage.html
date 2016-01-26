@@ -7,25 +7,23 @@
     <script src="/static/scripts/js.js"></script>
 </head>
 <body>
-    <div id="login" >
-        <form class='hidden' id="loginForm">
+    <div id="chatBar">
+        <form style="display:none" id="loginForm">
             <input type="text" name="username" id="username"></input>
             <input type="submit" value="login" ></input>
         </form>
-        
+        <form style="display:none" id="chatBoxForm" class="inline">
+            <input type="text" name="chatBox" id="chatBox" id="msg"></input>
+            <input type="submit" value="send"></input>
+        </form>
+        <form style="display:none" id="logoutForm" class="inline">
+            <input type="submit" value="logout" ></input>
+        </form>
     </div>
 
     <div id="msgDisplay"></div>
     <div id="nickDisplay"></div>
-    <div id="chatBar">
-        <form class="hidden" id="chatBarForm">
-            <input type="text" name="chatBox" id="chatBox" id="msg"></input>
-            <input type="submit" value="send"></input>
-        </form>
-        <form class='hidden' id="logoutForm">
-            <input type="submit" value="logout" ></input>
-        </form>
-    </div>
+   
 </body>
 </html>
 

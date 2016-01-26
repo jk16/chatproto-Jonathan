@@ -1,12 +1,10 @@
 $( document ).ready(function() {
     var $loginForm = $("#loginForm");
     var $logoutForm = $("#logoutForm");
-    var $chatBarForm = $("#chatBarForm");
-    var $login = $("#login");
-    var $chatBar = $("#chatBar");
+    var $chatBoxForm = $("#chatBoxForm");
     $loginForm.show();
     
-    $login.on('submit', function(e) {
+    $loginForm.on('submit', function(e) {
 
         e.preventDefault();
 
@@ -23,14 +21,14 @@ $( document ).ready(function() {
             success: function(response) {
                 //server response that the data was received 
                 $loginForm.hide();
-                $chatBarForm.show();
+                $chatBoxForm.show();
                 $logoutForm.show();
             }
         })
 
     }); //end login on submit
 
-    $chatBarForm.on("submit", function(e) {
+    $chatBoxForm.on("submit", function(e) {
         e.preventDefault();
         var $user = $("#username");
         var $msg = $("#msg");
@@ -40,14 +38,11 @@ $( document ).ready(function() {
             message: $msg.val()
         };
 
-        var data_JSON = JSON.stringify(data);
-
         $.ajax({
             type: 'POST',
             url: '/msg',
             data: data,
             success: function(response) {
-                //
                 console.log('success: chatBarForm submit');
             }
         });
@@ -66,9 +61,8 @@ $( document ).ready(function() {
             url: '/logout',
             data: message,
             success: function(response) {
-                //server response that the data was received 
                 $loginForm.show();
-                $chatBarForm.hide();
+                $chatBoxForm.hide();
                 $logoutForm.hide();
             }
         })
