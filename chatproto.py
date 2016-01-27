@@ -3,6 +3,10 @@ import tornado.web
 import json
 from tornado import gen
 import asyncio
+from tornado.ioloop import IOLoop
+from tornado.platform.asyncio import AsyncIOMainLoop
+
+
 """
 * Client:
     * Chat Page
@@ -84,9 +88,10 @@ def make_app():
 
 
 def main():
+    AsyncIOMainLoop().install()
     app = make_app()
     app.listen(8888)
-    tornado.ioloop.IOLoop.current().start()
+    asyncio.get_event_loop().run_forever()
 
 
 if __name__ == "__main__":
