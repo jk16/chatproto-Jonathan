@@ -1,6 +1,8 @@
 import tornado.ioloop
 import tornado.web
 import json
+from tornado import gen
+import asyncio
 """
 * Client:
     * Chat Page
@@ -27,6 +29,8 @@ import json
     * Rebroadcast nick logins/logouts
 """
 
+_userNames = {}
+
 class ChatPageHandler(tornado.web.RequestHandler):
     def get(self):
         """
@@ -35,16 +39,31 @@ class ChatPageHandler(tornado.web.RequestHandler):
         self.render('chatpage.html')
 
 class LoginPageHandler(tornado.web.RequestHandler):
+    @gen.coroutine
     def post(self):
         response = {"success": True, "message": "logged in successfully"}
         self.set_header("Content-Type", "application/json")
+
+
+                            #self.func_asyncio_coroutine() is a corotine function
+                            #   and returns a coroutine
+        yield asyncio.async( self.func_asyncio_coroutine() )
+                            #asyncio.async turns it into a Task ie type of 
+                            #   asyncio Future which Tornado understands
         self.write(json.dumps(response))
+
+
+    @asyncio.coroutine #this is the coroutine function
+    def func_asyncio_coroutine(self):
+        #asyncio is always yield from
+        yield from asyncio.sleep(0.5)
 
 class MessagePageHandler(tornado.web.RequestHandler):
     def post(self):
         response = {"success": True, "message": "message sent"}
         self.set_header("Content-Type", "application/json")
         self.write(json.dumps(response))
+
 class LogoutPageHandler(tornado.web.RequestHandler):
     def post(self):
         response = {"success": True, "message":"logged out successfully"}
