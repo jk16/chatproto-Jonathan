@@ -22,12 +22,12 @@ Todo
   * Make logout handler
     * Send to fictional page of your own choosing
     * Bundle username and send it back </s>
-* Server (login page) delays for 5 seconds before it responds
+* <s>Server (login page) delays for 5 seconds before it responds
   * Use asyncio
     * HINT: Instead of a regular get/post make a tornado coroutine get/post
     * HINT: make new func that should be an asyncio coroutine
     * HINT: Figure out how to call a single asyncio coroutine inside a tornado coroutine
-    * HINT: Do the sleep inside the asyncio coroutine using the asyncio sleep
+    * HINT: Do the sleep inside the asyncio coroutine using the asyncio sleep </s>
 * Use a global dict that will store all the currently logged in usernames
   * Make sure when the user logs out it removes it from the dict
 * Login with same username responds with a failure message (to the ajax ie from server)
